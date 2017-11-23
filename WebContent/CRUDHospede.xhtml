@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Cadastro Hóspede</title>
+    </h:head>
+    <h:body>
+        <f:view>
+            <fieldset>
+                <h:form id="cadastrarHospede">
+                    <p:panelGrid columns="2">
+                    
+                    	<p:outputLabel for="cpf" value="CPF"/>
+                        <p:inputText id="cpf" value="#{hospedeBean.hospede.cpf}"/>
+                        
+                        <p:outputLabel for="login" value="Login:"/>
+                        <p:inputText id="login" value="#{hospedeBean.hospede.login}"/>
+                        
+                        <p:outputLabel for="senha" value="Senha:"/>
+                        <p:inputText id="senha" value="#{hospedeBean.hospede.senha}"/>
+                        
+                        <p:outputLabel for="nome" value="Nome:"/>
+                        <p:inputText id="nome" value="#{hospedeBean.hospede.nome}"/>
+                        
+                        <p:outputLabel for="sexo" value="Sexo:"/>
+                        <p:inputText id="sexo" value="#{hospedeBean.hospede.sexo}"/>
+                        
+                        <p:outputLabel for="dtNascimento" value="Data de Nascimento:"/>
+                        <p:inputText id="dtNascimento" value="#{hospedeBean.hospede.dtNascimento}"/>
+                        
+                        <p:outputLabel for="email" value="E-mail:"/>
+                        <p:inputText id="email" value="#{hospedeBean.hospede.email}"/>
+                        
+                        <p:outputLabel for="telefone" value="Telefone:"/>
+                        <p:inputText id="telefone" value="#{hospedeBean.hospede.telefone}"/>
+                        
+                        <p:commandButton value="SALVAR" action="#{hospedeBean.adicionaHospede()}"/>
+                    </p:panelGrid>
+                </h:form>
+            </fieldset>
+        </f:view>
+    </h:body>
+</html>
