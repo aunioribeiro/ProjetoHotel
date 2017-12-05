@@ -1,5 +1,7 @@
 package basicas;
 
+import java.util.Objects;
+
 import javax.persistence.Entity;
 
 import javax.persistence.Table;
@@ -25,5 +27,14 @@ public class Hospede extends Pessoa {
 	}
 	public void setTelefone(String telefone) {
 		this.telefone = telefone;
-	}    
+	}
+	
+	@Override
+    public boolean equals(Object obj) {
+        if (obj == null) {
+            return false;
+        }
+        return true;
+    }
+	
 }

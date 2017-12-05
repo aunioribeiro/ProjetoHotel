@@ -13,11 +13,18 @@
                 <p:toolbarGroup>
                     <p:menubar>
                 		<p:menuitem value="Cadastrar" url="cadastrarhospede.jsf"></p:menuitem>
-                		<p:menuitem value="Pesquisar" url="crudhospede.jsf"></p:menuitem>
+                		<p:menuitem value="Pesquisar" url="listarhospede.jsf"></p:menuitem>
                 		<p:menuitem value="Remover" url="removerhospede.jsf"></p:menuitem>
             		</p:menubar>
                 </p:toolbarGroup>	
             </p:toolbar>
+            
+            <p:dataTable var="hospede" value="#{hospedeBean.hospedes}">
+                <p:column headerText="CPF">
+                    <h:outputText value="#{hospedeBean.hospede.cpf}" />
+                </p:column>
+
+           	</p:dataTable>      
         </p:fieldset>
     </h:form>
 </ui:decorate>

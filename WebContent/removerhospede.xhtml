@@ -13,11 +13,20 @@
                 <p:toolbarGroup>
                     <p:menubar>
                 		<p:menuitem value="Cadastrar" url="cadastrarhospede.jsf"></p:menuitem>
-                		<p:menuitem value="Pesquisar" url="crudhospede.jsf"></p:menuitem>
+                		<p:menuitem value="Pesquisar" url="listarhospede.jsf"></p:menuitem>
                 		<p:menuitem value="Remover" url="removerhospede.jsf"></p:menuitem>
             		</p:menubar>
                 </p:toolbarGroup>	
             </p:toolbar>
+            
+            <h:form>
+                    <p:panelGrid columns="2">
+                        <p:outputLabel for="idPessoa" value="Id do Hóspede:"/>
+                        <p:inputText id="idPessoa" value="#{hospedeBean.hospede.idPessoa}"/>
+                        <p:commandButton value="Remover" action="#{hospedeBean.removeHospede()}"/>
+                    </p:panelGrid>
+                </h:form>
+            
         </p:fieldset>
     </h:form>
 </ui:decorate>

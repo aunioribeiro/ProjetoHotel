@@ -98,7 +98,6 @@ public abstract class DAOGenerico <Entity> {
 		EntityTransaction tx = em.getTransaction();
 		tx.begin();
 
-		// Este merge foi incluido para permitir a exclusao de objetos no estado Detached
 		objeto = em.merge(objeto);
 		
 		em.remove(objeto);
@@ -138,12 +137,6 @@ public abstract class DAOGenerico <Entity> {
 		return entityManagerFactory;
 	}
 
-	
-	/**
-	 * Busca a classe persistente do objeto utilizado na classe.
-	 * 
-	 * @return classe persistente
-	 */
 	protected final Class<Entity> getPersistentClass() {
 		return persistentClass;
 	}

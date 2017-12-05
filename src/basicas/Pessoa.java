@@ -1,6 +1,7 @@
 package basicas;
 
 import java.util.Calendar;
+import java.util.Objects;
 
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -21,6 +22,21 @@ public abstract class Pessoa {
     private String dtNascimento;
     
     
+    
+    //CONSTRUTOR
+    public Pessoa() {
+    	
+    }
+    
+    public Pessoa(int idPessoa, String cpf, String login, String senha, String nome, String sexo, String dtNascimento) {
+    	this.idPessoa = idPessoa;
+    	this.cpf = cpf;
+    	this.login = login;
+    	this.senha = senha;
+    	this.nome = nome;
+    	this.sexo = sexo;
+    	this. dtNascimento = dtNascimento;
+    }
     
     //GETTERS&SETTERS
 	public int getIdPessoa() {
@@ -78,5 +94,5 @@ public abstract class Pessoa {
 	public void setDtNascimento(String dtNascimento) {
 		this.dtNascimento = dtNascimento;
 	}
-     
+	
 }

@@ -50,11 +50,11 @@ public class NegocioHospede {
         }
         
         if(h.getCpf().equals("   .   .   -  ")) {
-            throw new Exception("H贸sspede n茫o encontrado!");
+            throw new Exception("H髎pede n鉶 encontrado!");
         }
         
         if(h.getCpf() == null) {
-            throw new Exception("H贸spede n茫o encotrado!");
+            throw new Exception("H髎pede n鉶 encontrado!");
         }
     }
     
@@ -62,11 +62,11 @@ public class NegocioHospede {
         Hospede h = new Hospede();
         
         if(h.getCpf().equals("   .   .   -  ")) {
-            throw new Exception("H贸sspede n茫o encontrado!");
+            throw new Exception("H髎pede n鉶 encontrado!");
         }
         
         if(h.getCpf() == null) {
-            throw new Exception("H贸spede n茫o encotrado!");
+            throw new Exception("H髎pede n鉶 encontrado!");
         }        
     }
     
