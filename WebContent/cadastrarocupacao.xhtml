@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:decorate xmlns="http://www.w3.org/1999/xhtml"
+             xmlns:h="http://xmlns.jcp.org/jsf/html"
+             xmlns:p="http://primefaces.org/ui"
+             xmlns:f="http://xmlns.jcp.org/jsf/core"
+             xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+             template="template.xhtml">
+	
+    <h:form>
+        <p:fieldset legend="Ocupações">
+            <p:toolbar>
+                <p:toolbarGroup>
+                    <p:menubar>
+                		<p:menuitem value="Cadastrar" url="cadastrarocupacao.jsf"></p:menuitem>
+                		<p:menuitem value="Pesquisar" url="listarocupacao.jsf"></p:menuitem>
+                		<p:menuitem value="Remover" url="removerocupacao.jsf"></p:menuitem>
+            		</p:menubar>
+                </p:toolbarGroup>	
+            </p:toolbar>
+            <h:form id="cadastrarOcupacao">
+                    <p:panelGrid columns="2">
+                    
+                    	<p:outputLabel for="idQuarto" value="idQuarto:"/>
+                        <p:inputText id="idQuarto" value="#{ocupacaoBean.ocupacao.quarto.idQuarto}"/>
+                        
+                        <p:outputLabel for="idHospede" value="idHospede:"/>
+                        <p:inputText id="idHospede" value="#{ocupacaoBean.ocupacao.hospede.idPessoa}"/>
+                        
+                        <p:outputLabel for="valorDiaria" value="Valor Diária:"/>
+                        <p:inputText id="valorDiaria" value="#{ocupacaoBean.ocupacao.valorDiaria}"/>
+                        
+                        <p:outputLabel for="dtEntrada" value="Entrada:"/>
+                        <p:inputText id="dtEntrada" value="#{ocupacaoBean.ocupacao.dtEntrada}"/>
+                        
+                        <p:outputLabel for="dtSaida" value="Saída:"/>
+                        <p:inputText id="dtSaida" value="#{ocupacaoBean.ocupacao.dtSaida}"/>
+                        
+                        <p:outputLabel for="hrEntrada" value="Hora Entrada:"/>
+                        <p:inputText id="hrEntrada" value="#{ocupacaoBean.ocupacao.hrEntrada}"/>
+                        
+                        <p:outputLabel for="hrSaida" value="Hora Saída:"/>
+                        <p:inputText id="hrSaida" value="#{ocupacaoBean.ocupacao.hrSaida}"/>
+                        
+                        <p:commandButton value="Salvar" action="#{ocupacaoBean.adicionaOcupacao()}"/>
+                    </p:panelGrid>
+                </h:form>
+        </p:fieldset>
+    </h:form>
+</ui:decorate>

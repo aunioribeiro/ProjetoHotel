@@ -7,25 +7,20 @@
              xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
              template="template.xhtml">
              
+             <h:form>
+              <p:messages id="messages" />
+              <p:panelGrid columns="2">
+                    <p:outputLabel for="login" value="Login:" />
+                    <p:inputText id="login" value="#{funcionarioBean.funcionario.login}" />
+                    
+                    <p:outputLabel for="senha" value="Senha:" />
+                    <p:password id="senha" value="#{funcionarioBean.funcionario.senha}" />
+                    
+                    <p:commandButton value="Logar	" icon="ui-icon-star" action="#{LoginMB.envia}" ajax="false">
+                    </p:commandButton>
+   
+              </p:panelGrid>
+       		  </h:form>
              
-<h:form id="form1">  
-                <p:growl id="id" showDetail="true" life="4000" />
-                <fieldset>
-                    <h:panelGrid columns="2" cellspacing="9">
-                        <h:outputText value="Usuário: " />
-                        <p:inputText id="login" value="#{funcionarioBean.funcionario.login}" 
-                                     required="true" requiredMessage="Informe o usuário"/>
-                        <h:outputText value="Senha: " />
-                        <p:password inline="true" 
-                                    id="senha" 
-                                    value="#{funcionarioBean.funcionario.senha}" 
-                                    required="true" 
-                                    requiredMessage="Informe a senha"/>
-                        <br></br>
-                        <br></br>
-                    </h:panelGrid>
-                </fieldset>
-             </h:form>
              
-    
 </ui:decorate>

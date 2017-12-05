@@ -15,7 +15,7 @@ import dados.HospedeDAO;
 public class HospedeBean {
 	
 	private List<Hospede> hospedes = new ArrayList<Hospede>();
-	private Hospede hospede;
+	private Hospede hospede = new Hospede();
 	private HospedeDAO hospedeDAO;
 	
 
@@ -57,6 +57,7 @@ public class HospedeBean {
 	public List<Hospede> getHospedes() {
 		this.hospedes = hospedeDAO.getAll();
 		return this.hospedes;
+				
 	}
 
 	public void setHospedes(List<Hospede> hospedes) {

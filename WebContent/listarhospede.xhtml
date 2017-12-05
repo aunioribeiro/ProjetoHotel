@@ -19,7 +19,7 @@
                 </p:toolbarGroup>	
             </p:toolbar>
             
-            <p:dataTable var="hospede" value="#{hospedeBean.hospedes}">
+            <p:dataTable value="#{hospedeBean.hospedes}" var="t">
             
             	<p:column headerText="Id">
                     <h:outputText value="#{hospedeBean.hospede.idPessoa}" />
@@ -56,7 +56,6 @@
                 <p:column headerText="Telefone">
                     <h:outputText value="#{hospedeBean.hospede.telefone}" />
                 </p:column>
-				
 				
            	</p:dataTable>      
         </p:fieldset>

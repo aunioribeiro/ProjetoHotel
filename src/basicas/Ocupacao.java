@@ -23,8 +23,8 @@ public class Ocupacao {
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int idOcupacao;
 	private float valorDiaria;
-    private Calendar dtEntrada;
-    private Calendar dtSaida;
+    private String dtEntrada;
+    private String dtSaida;
     private String hrEntrada;
     private String hrSaida;
     
@@ -72,19 +72,19 @@ public class Ocupacao {
 		this.valorDiaria = valorDiaria;
 	}
 
-	public Calendar getDtEntrada() {
+	public String getDtEntrada() {
 		return dtEntrada;
 	}
 
-	public void setDtEntrada(Calendar dtEntrada) {
+	public void setDtEntrada(String dtEntrada) {
 		this.dtEntrada = dtEntrada;
 	}
 
-	public Calendar getDtSaida() {
+	public String getDtSaida() {
 		return dtSaida;
 	}
 
-	public void setDtSaida(Calendar dtSaida) {
+	public void setDtSaida(String dtSaida) {
 		this.dtSaida = dtSaida;
 	}
 

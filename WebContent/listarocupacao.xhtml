@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:decorate xmlns="http://www.w3.org/1999/xhtml"
+             xmlns:h="http://xmlns.jcp.org/jsf/html"
+             xmlns:p="http://primefaces.org/ui"
+             xmlns:f="http://xmlns.jcp.org/jsf/core"
+             xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+             template="template.xhtml">
+
+    <h:form>
+        <p:fieldset legend="Ocupações">
+            <p:toolbar>
+                <p:toolbarGroup>
+                    <p:menubar>
+                		<p:menuitem value="Cadastrar" url="cadastrarocupacao.jsf"></p:menuitem>
+                		<p:menuitem value="Pesquisar" url="listarocupacao.jsf"></p:menuitem>
+                		<p:menuitem value="Remover" url="removerocupacao.jsf"></p:menuitem>
+            		</p:menubar>
+                </p:toolbarGroup>	
+            </p:toolbar>
+            
+            <p:dataTable var="ocupacao" value="#{ocupacaoBean.ocupacoes}">
+                
+                <p:column headerText="Id">
+                    <h:outputText value="#{ocupacaoBean.ocupacao.idOcupacao}" />
+                </p:column>
+                
+                <p:column headerText="idHospede">
+                    <h:outputText value="#{ocupacaoBean.ocupacao.hospede.idPessoa}" />
+                </p:column>
+                
+                <p:column headerText="idQuarto">
+                    <h:outputText value="#{ocupacaoBean.ocupacao.quarto.idQuarto}" />
+                </p:column>
+
+				<p:column headerText="Valor Diária">
+                    <h:outputText value="#{ocupacaoBean.ocupacao.valorDiaria}" />
+                </p:column>
+
+				<p:column headerText="dtEntrada">
+                    <h:outputText value="#{ocupacaoBean.ocupacao.dtEntrada}" />
+                </p:column>
+                
+                <p:column headerText="dtSaida">
+                    <h:outputText value="#{ocupacaoBean.ocupacao.dtSaida}" />
+                </p:column>
+				
+				<p:column headerText="hrEntrada">
+                    <h:outputText value="#{ocupacaoBean.ocupacao.hrEntrada}" />
+                </p:column>
+                
+                <p:column headerText="hrSaida">
+                    <h:outputText value="#{ocupacaoBean.ocupacao.hrSaida}" />
+                </p:column>
+
+           	</p:dataTable>      
+        </p:fieldset>
+    </h:form>
+</ui:decorate>
