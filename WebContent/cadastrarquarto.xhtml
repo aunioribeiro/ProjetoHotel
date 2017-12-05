@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:decorate xmlns="http://www.w3.org/1999/xhtml"
+             xmlns:h="http://xmlns.jcp.org/jsf/html"
+             xmlns:p="http://primefaces.org/ui"
+             xmlns:f="http://xmlns.jcp.org/jsf/core"
+             xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+             template="template.xhtml">
+	
+    <h:form>
+        <p:fieldset legend="Quartos">
+            <p:toolbar>
+                <p:toolbarGroup>
+                    <p:menubar>
+                		<p:menuitem value="Cadastrar" url="cadastrarquarto.jsf"></p:menuitem>
+                		<p:menuitem value="Pesquisar" url="listarquarto.jsf"></p:menuitem>
+                		<p:menuitem value="Remover" url="removerquarto.jsf"></p:menuitem>
+            		</p:menubar>
+                </p:toolbarGroup>	
+            </p:toolbar>
+            <h:form id="cadastrarQuarto">
+                    <p:panelGrid columns="2">
+                    
+                    	<p:outputLabel for="num" value="Número:"/>
+                        <p:inputText id="num" value="#{quartoBean.quarto.num}"/>
+                        
+                        <p:outputLabel for="descricao" value="Descricao:"/>
+                        <p:inputText id="descricao" value="#{quartoBean.quarto.descricao}"/>
+                        
+                        <p:outputLabel for="andar" value="Andar:"/>
+                        <p:inputText id="andar" value="#{quartoBean.quarto.andar}"/>
+                        
+                        <p:outputLabel for="preco" value="Preço:"/>
+                        <p:inputText id="preco" value="#{quartoBean.quarto.preco}"/>
+                        
+                        <p:commandButton value="Salvar" action="#{quartoBean.adicionaQuarto()}"/>
+                    </p:panelGrid>
+                </h:form>
+        </p:fieldset>
+    </h:form>
+</ui:decorate>

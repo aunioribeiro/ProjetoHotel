@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:decorate xmlns="http://www.w3.org/1999/xhtml"
+             xmlns:h="http://xmlns.jcp.org/jsf/html"
+             xmlns:p="http://primefaces.org/ui"
+             xmlns:f="http://xmlns.jcp.org/jsf/core"
+             xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+             template="template.xhtml">
+
+    <h:form>
+        <p:fieldset legend="Funcionário">
+            <p:toolbar>
+                <p:toolbarGroup>
+                    <p:menubar>
+                		<p:menuitem value="Cadastrar" url="cadastrarfuncionarios.jsf"></p:menuitem>
+                		<p:menuitem value="Pesquisar" url="listarfuncionario.jsf"></p:menuitem>
+                		<p:menuitem value="Remover" url="removerfuncionario.jsf"></p:menuitem>
+            		</p:menubar>
+                </p:toolbarGroup>	
+            </p:toolbar>
+            
+            <p:dataTable var="funcionario" value="#{funcionarioBean.funcionarios}">
+                
+                <p:column headerText="Id">
+                    <h:outputText value="#{funcionarioBean.funcionario.idPessoa}" />
+                </p:column>
+                
+                <p:column headerText="CPF">
+                    <h:outputText value="#{funcionarioBean.funcionario.cpf}" />
+                </p:column>
+                
+                <p:column headerText="Login">
+                    <h:outputText value="#{funcionarioBean.funcionario.login}" />
+                </p:column>
+
+				<p:column headerText="Senha">
+                    <h:outputText value="#{funcionarioBean.funcionario.senha}" />
+                </p:column>
+
+				<p:column headerText="Nome">
+                    <h:outputText value="#{funcionarioBean.funcionario.nome}" />
+                </p:column>
+				
+				<p:column headerText="Sexo">
+                    <h:outputText value="#{funcionarioBean.funcionario.sexo}" />
+                </p:column>
+				
+				<p:column headerText="Nascimento">
+                    <h:outputText value="#{funcionarioBean.funcionario.dtNascimento}" />
+                </p:column>
+				
+				<p:column headerText="Salário">
+                    <h:outputText value="#{funcionarioBean.funcionario.salario}" />
+                </p:column>
+				
+				<p:column headerText="Cargo">
+                    <h:outputText value="#{funcionarioBean.funcionario.cargo}" />
+                </p:column>
+
+           	</p:dataTable>      
+        </p:fieldset>
+    </h:form>
+</ui:decorate>

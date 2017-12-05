@@ -20,10 +20,44 @@
             </p:toolbar>
             
             <p:dataTable var="hospede" value="#{hospedeBean.hospedes}">
+            
+            	<p:column headerText="Id">
+                    <h:outputText value="#{hospedeBean.hospede.idPessoa}" />
+                </p:column>
+            	
                 <p:column headerText="CPF">
                     <h:outputText value="#{hospedeBean.hospede.cpf}" />
                 </p:column>
 
+				<p:column headerText="Login">
+                    <h:outputText value="#{hospedeBean.hospede.login}" />
+                </p:column>
+				
+				<p:column headerText="Senha">
+                    <h:outputText value="#{hospedeBean.hospede.senha}" />
+                </p:column>
+				
+				<p:column headerText="Nome">
+                    <h:outputText value="#{hospedeBean.hospede.nome}" />
+                </p:column>
+				
+				<p:column headerText="Sexo">
+                    <h:outputText value="#{hospedeBean.hospede.sexo}" />
+                </p:column>
+				
+				<p:column headerText="Nascimento">
+                    <h:outputText value="#{hospedeBean.hospede.dtNascimento}" />
+                </p:column>
+				
+				<p:column headerText="Email">
+                    <h:outputText value="#{hospedeBean.hospede.email}" />
+                </p:column>
+                
+                <p:column headerText="Telefone">
+                    <h:outputText value="#{hospedeBean.hospede.telefone}" />
+                </p:column>
+				
+				
            	</p:dataTable>      
         </p:fieldset>
     </h:form>

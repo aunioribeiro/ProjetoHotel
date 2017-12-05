@@ -1,6 +1,5 @@
 package bean;
 
-import javax.faces.bean.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,8 +14,8 @@ import dados.HospedeDAO;
 @ViewScoped
 public class HospedeBean {
 	
+	private List<Hospede> hospedes = new ArrayList<Hospede>();
 	private Hospede hospede;
-	private List<Hospede> hospedes;
 	private HospedeDAO hospedeDAO;
 	
 

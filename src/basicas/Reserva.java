@@ -20,7 +20,7 @@ public class Reserva {
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int idReserva;
 	private int periodo;
-    private Calendar dtReserva;
+    private String dtReserva;
     private String estado;
      
     
@@ -54,11 +54,11 @@ public class Reserva {
 		this.periodo = periodo;
 	}
 
-	public Calendar getDtReserva() {
+	public String getDtReserva() {
 		return dtReserva;
 	}
 
-	public void setDtReserva(Calendar dtReserva) {
+	public void setDtReserva(String dtReserva) {
 		this.dtReserva = dtReserva;
 	}
 
