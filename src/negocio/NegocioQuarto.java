@@ -1,5 +1,8 @@
 package negocio;
 
+import java.util.ArrayList;
+
+import basicas.Hospede;
 import basicas.Quarto;
 import dados.DAOFabrica;
 import dados.QuartoDAO;
@@ -62,4 +65,8 @@ public class NegocioQuarto {
         validarRemoverQuarto(q);
         DAOFabrica.getQuartoDAO().remove(q);
     }   
+    
+    public ArrayList<Quarto> listarQuarto(ArrayList<Quarto> listaQuarto) throws Exception {
+		return listaQuarto = (ArrayList<Quarto>) DAOFabrica.getQuartoDAO().getAll();
+    }
 }

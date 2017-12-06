@@ -1,5 +1,7 @@
 package negocio;
 
+import java.util.ArrayList;
+
 import javax.persistence.EntityManagerFactory;
 
 import basicas.Hospede;
@@ -88,5 +90,9 @@ public class NegocioHospede {
     public Hospede pesquisarHospede(String cpf) throws Exception {
         validarPesquisarHospede(cpf);
         return DAOFabrica.getHospedeDAO().searchByKey(cpf);
+    }
+    
+    public ArrayList<Hospede> listarHospede(ArrayList<Hospede> listaHospede) throws Exception {
+		return listaHospede = (ArrayList<Hospede>) DAOFabrica.getHospedeDAO().getAll();
     }
 }

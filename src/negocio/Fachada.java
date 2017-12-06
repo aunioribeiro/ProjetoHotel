@@ -1,5 +1,7 @@
 package negocio;
 
+import java.util.ArrayList;
+
 import basicas.Funcionario;
 import basicas.Hospede;
 import basicas.Ocupacao;
@@ -43,6 +45,10 @@ public class Fachada {
        return this.nh.pesquisarHospede(cpf);
     }
     
+    public ArrayList<Hospede> listarHospede(ArrayList<Hospede> listaHospede) throws Exception {
+		return this.nh.listarHospede(listaHospede);
+    }
+    
     //Funcionário
     public void cadastrarFuncionario(Funcionario f) throws Exception {
     		this.nf.cadastrarFuncionario(f);
@@ -80,6 +86,10 @@ public class Fachada {
     
     public void removerQuarto(Quarto q) throws Exception {
     		this.nq.removerQuarto(q);
+    }
+    
+    public ArrayList<Quarto> listarQuarto(ArrayList<Quarto> listaQuarto) throws Exception {
+		return this.nq.listarQuarto(listaQuarto);
     }
     
     //Resereva

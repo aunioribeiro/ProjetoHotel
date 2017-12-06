@@ -20,7 +20,17 @@ public class Quarto {
     private int andar;
     private double preco;
     
+    public Quarto() {
+    	
+    }
     
+    public Quarto(int num, String descricao, int andar, double preco) {
+    	
+    	this.num = num;
+    	this.descricao = descricao;
+    	this.andar = andar;
+    	this.preco = preco;
+    }
     
     //RELACIONAMENTOS
    @ManyToOne

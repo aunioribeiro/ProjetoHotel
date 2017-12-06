@@ -63,16 +63,11 @@ public abstract class DAOGenerico <Entity> {
 	public Entity update(Entity objeto) {
 		
 		EntityManager em = this.entityManagerFactory.createEntityManager();
-
 		EntityTransaction tx = em.getTransaction();
 		tx.begin();
-		
 		objeto = em.merge(objeto);
-		
 		tx.commit();
-		
 		em.close();
-		
 		return objeto;
 	}
 	

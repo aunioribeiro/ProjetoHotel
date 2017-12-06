@@ -14,8 +14,8 @@ import dados.QuartoDAO;
 @ViewScoped
 public class QuartoBean {
 	
-	private List<Quarto> quartos = new ArrayList<Quarto>();
 	private Quarto quarto;
+	private List<Quarto> quartos = new ArrayList<Quarto>();
 	private QuartoDAO quartoDAO;
 	
 
@@ -57,6 +57,9 @@ public class QuartoBean {
 	public List<Quarto> getQuartos() {
 		this.quartos = quartoDAO.getAll();
 		return this.quartos;
+		//this.quartos = quartoDAO.listarTodos();
+		//return this.quartos;
+		
 	}
 
 	public void setQuartos(List<Quarto> quartos) {

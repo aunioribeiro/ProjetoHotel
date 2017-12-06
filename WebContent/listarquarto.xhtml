@@ -19,11 +19,11 @@
                 </p:toolbarGroup>	
             </p:toolbar>
             
-            <p:dataTable var="quarto" value="#{quartoBean.quartos}">
+            <p:dataTable value="#{quartoBean.quartos}" var="lala" >
                 
-                <p:column headerText="Id">
+                <h:column headerText="Id">
                     <h:outputText value="#{quartoBean.quarto.idQuarto}" />
-                </p:column>
+                </h:column>
                 
                 <p:column headerText="Número">
                     <h:outputText value="#{quartoBean.quarto.num}" />
